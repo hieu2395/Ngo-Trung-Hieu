@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $("input[type='button']").click(function(){
+                alert($('#ajax').text());
+           });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="ajax">
+        <a href="http://hipsterjesus.com/api/?type=hipster-centric&paras=4"></a>
+    </div>
+    <input type="button" onclick="fetch_api" value="fetch Api">
+</body>
+</html>

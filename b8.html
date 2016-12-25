@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!--xoa 1 dong trong option-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type='button']").click(function () {
+                $('#colorSelect option:last').remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <form charset="utf-8">
+        <select id="colorSelect">
+            <option>
+                Red
+            </option>
+            <option>
+                green
+            </option>
+            <option>
+                white
+            </option>
+            <option>
+                black
+            </option>
+        </select>
+        <input type="button" onclick="removeColor()" value="Select and Remove">
+    </form>
+</body>
+</html>

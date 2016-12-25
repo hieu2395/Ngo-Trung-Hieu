@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--xem tung thuoc tinh cua the a-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert(
+                $("#somethink").attr("type")        + " " + 
+                $("#somethink").attr("hreflang")    + " " + 
+                $("#somethink").attr("rel")         + " " + 
+                $("#somethink").attr("rel")         + " " + 
+                $("#somethink").attr("target")      + " " + 
+                $("#somethink").attr("href")
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <p>
+            <a id="somethink" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.google.com.vn/">Google Website</a>
+        </p>
+        <button  onclick="getAttributes()">Click here to get attributes value</button>
+    </form>
+</body>
+</html>

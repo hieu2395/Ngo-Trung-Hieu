@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!--kick co mang hinh-->
+    <script type="text/javascript">
+       $(document).ready(function(){
+           $("button").click(function(){
+               var txt = "";
+               txt += "Width / Height: " +$(window).width();
+               txt += "x" +$(window).height() + "\n";
+               alert(txt);
+           });
+       });
+    </script>
+</head>
+<body>
+   <button>Display</button>
+</body>
+</html>

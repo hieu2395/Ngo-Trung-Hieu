@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--them chuoi row in table vao tung` cot-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type='button']").click(function () {
+                $('#myTable tr td').append('Row in table');
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row 1
+            </td>
+            <td>Row 2
+            </td>
+        </tr>
+        <tr>
+            <td>Row 1
+            </td>
+            <td>Row 2
+            </td>
+        </tr>
+    </table>
+    <br />
+    <input type="button" onclick="changeContent()" value="Change Content" />
+</body>
+</html>

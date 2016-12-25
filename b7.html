@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--them 3 dong 5 cot trong table-->
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[type=button]").click(function(){
+                var table = $('<table></table>').addClass('foo');
+                for(i = 0; i < 3; i++)
+                {
+                    var row = $('<tr></tr>');
+                    for (j = 0; j < 5; j++) 
+                    {
+                        var row1 = $('<td></td>').addClass('bar').text('Row' + i);
+                        table.append(row);
+                        row.append(row1);
+                    }
+                }
+                $("#addTable").append(table);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="addTable"></div>
+    <br />
+    <input type="button" onclick="createTable(3,5)" value="Insert Row" />
+</body>
+</html>

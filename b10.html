@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--random img-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[type='button']").click(function(){
+                 var randomImage = {
+                    paths: ['http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg',
+                            'http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg',
+                            'http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg'],
+                            generate: function(){
+                                var path = randomImage.paths[Math.floor(Math.random()*randomImage.paths.length)];
+                                var img = new Image();
+                                img.src = path;
+                                $("#myImg").html(img);
+                                $("#myImg").attr("href",path);
+                            }
+                 }
+                 randomImage.generate();
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div>
+        <a href="" id="myImg"></a>
+        <input type="button" value="Random">
+    </div>
+</body>
+</html>
